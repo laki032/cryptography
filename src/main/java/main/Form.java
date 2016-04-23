@@ -73,11 +73,11 @@ public class Form extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEncr)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnDecr)
-                        .addComponent(btnPerform)))
+                        .addComponent(btnPerform))
+                    .addComponent(btnEncr))
                 .addGap(18, 18, 18)
                 .addComponent(lblMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -171,9 +171,8 @@ public class Form extends javax.swing.JFrame {
         try {
             Encryptor.decrypt(fileToDecrypt, password);
         } catch (Exception ex) {
-            lblMessage.setText("Error encryptig file");
+            lblMessage.setText("Error decryptig file");
         }
-        lblMessage.setText("Error decryptig file");
         lblMessage.setText("decrypted file: " + fileToDecrypt.getAbsolutePath() + "_decrypted");
     }
 }

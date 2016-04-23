@@ -43,12 +43,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnEncr" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="btnDecr" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnPerform" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="btnEncr" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lblMessage" min="-2" pref="41" max="-2" attributes="0"/>
