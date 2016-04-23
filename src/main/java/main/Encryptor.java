@@ -3,7 +3,6 @@ package main;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.security.AlgorithmParameters;
 import java.security.Provider;
 import java.security.SecureRandom;
 import java.security.Security;
@@ -47,9 +46,6 @@ public class Encryptor {
         Cipher pbeCipher = Cipher.getInstance(algorithm);
 
         pbeCipher.init(Cipher.ENCRYPT_MODE, pbeKey, pbeParamSpec);
-        AlgorithmParameters algorithmParameters = pbeCipher.getParameters();
-        System.out.println(algorithmParameters.toString());
-
         FileInputStream in = new FileInputStream(fileToEncrypt);
         FileOutputStream out = new FileOutputStream(result);
         CipherOutputStream cipherOutputStream = new CipherOutputStream(out, pbeCipher);
